@@ -23,24 +23,6 @@ Designing a clean relational database schema prevents anomalies and ensures abso
 * **Department (`Department__c`)** $\rightarrow$ *One-to-Many* $\rightarrow$ **Faculty (`Faculty__c`)**
 * **Course (`Course__c`)** $\rightarrow$ *One-to-Many* $\rightarrow$ **Student (`Student__c`)**
 * **Faculty (`Faculty__c`)** $\rightarrow$ *One-to-Many* $\rightarrow$ **Course (`Course__c`)** *(Assigned Instructor)*
-
-```text
-  +-------------------+
-  |   Department__c   |
-  +---------+---------+
-            |
-            +-------------------+
-            | (1:N Lookup)      | (1:N Lookup)
-            v                   v
-  +-------------------+   +-------------------+
-  |    Faculty__c     |   |     Course__c     |
-  +---------+---------+   +---------+---------+
-            |                       |
-            | (1:N Lookup)          | (1:N Lookup)
-            | (Assigned Instructor) |
-            +---------> +-----------+---------+
-                        |     Student__c      |
-                        +---------------------+
+  ScreenShots:
 <img width="1861" height="703" alt="Screenshot 2026-05-14 210221" src="https://github.com/user-attachments/assets/059362e3-33da-4327-80fd-eaf7bfd1ba8f" />
 <img width="1891" height="684" alt="Screenshot 2026-05-14 210251" src="https://github.com/user-attachments/assets/dd87e606-701a-4539-8d4a-b7cc4e9c8047" />
-
